@@ -1,0 +1,106 @@
+$ pip install yehua
+$ yh
+Yehua will walk you through creating a blank python package.
+Press ^C to quit at any time.
+
+project name: moban-handlebars
+description: Provide handlebars templating capability to moban.
+license: MIT
+author: Charlie Liu, C.W et al
+contact email: wangc_2011@hotmail.com
+github profile/organisation: moremoban
+copyright owner: Moremoban members and its contributors
+project type?
+1. library
+2. command line interface
+3. C externsion
+(1,2,3): 1
+Requirement already satisfied: pypi-mobans-pkg==0.0.2 in /Users/user/github/moremoban/moban-env/lib/python3.6/site-packages (0.0.2)
+Requirement already satisfied: lml in /Users/user/github/moremoban/moban-env/lib/python3.6/site-packages (from pypi-mobans-pkg==0.0.2) (0.0.4)
+Templating CUSTOM_README.rst.jj2 to README.rst
+Templating custom_setup.py.jj2 to setup.py
+Templating requirements.txt.jj2 to requirements.txt
+Templating tests/custom_requirements.txt.jj2 to tests/requirements.txt
+Templating docs/conf.py_t to docs/source/conf.py
+Templating test.script.jj2 to test.sh
+Templating _version.py.jj2 to moban_handlebars/_version.py
+Templating gitignore.jj2 to .gitignore
+Templating travis.yml.jj2 to .travis.yml
+Templating Pipfile.jj2 to Pipfile
+Templated 10 files.
+Everything is up to date!
+Initialized empty Git repository in /Users/user/github/moremoban/moban-handlebars/.git/
+Please review changes before commit!
+All done!! project moban-handlebars is created
+(moban-env) Users-MacBook-Pro:moremoban user$ cd moban-handlebars/
+(moban-env) Users-MacBook-Pro:moban-handlebars user$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   .moban.d/CUSTOM_README.rst.jj2
+	new file:   .moban.d/custom_setup.py.jj2
+	new file:   .moban.d/tests/custom_requirements.txt.jj2
+	new file:   .moban.yml
+	new file:   .travis.yml
+	new file:   CHANGELOG.rst
+	new file:   MANIFEST.in
+	new file:   Makefile
+	new file:   README.rst
+	new file:   docs/source/conf.py
+	new file:   moban-handlebars.yml
+	new file:   moban_handlebars/__init__.py
+	new file:   moban_handlebars/_version.py
+	new file:   requirements.txt
+	new file:   setup.cfg
+	new file:   setup.py
+	new file:   test.sh
+	new file:   tests/requirements.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Pipfile
+
+(moban-env) Users-MacBook-Pro:moban-handlebars user$ git add Pipfile 
+(moban-env) Users-MacBook-Pro:moban-handlebars user$ git commit -am ":tada: moban-handlebars generated from yehua, the scaffolding tool"
+[master (root-commit) 9004392] :tada: moban-handlebars generated from yehua, the scaffolding tool
+ 20 files changed, 939 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .moban.d/CUSTOM_README.rst.jj2
+ create mode 100644 .moban.d/custom_setup.py.jj2
+ create mode 100644 .moban.d/tests/custom_requirements.txt.jj2
+ create mode 100644 .moban.yml
+ create mode 100644 .travis.yml
+ create mode 100644 CHANGELOG.rst
+ create mode 100644 MANIFEST.in
+ create mode 100644 Makefile
+ create mode 100644 Pipfile
+ create mode 100644 README.rst
+ create mode 100644 docs/source/conf.py
+ create mode 100644 moban-handlebars.yml
+ create mode 100644 moban_handlebars/__init__.py
+ create mode 100644 moban_handlebars/_version.py
+ create mode 100644 requirements.txt
+ create mode 100644 setup.cfg
+ create mode 100644 setup.py
+ create mode 100644 test.sh
+ create mode 100644 tests/requirements.txt
+(moban-env) Users-MacBook-Pro:moban-handlebars user$ git remote add origin https://github.com/moremoban/moban-handlebars.git
+(moban-env) Users-MacBook-Pro:moban-handlebars user$ git push -u origin master
+Counting objects: 28, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (28/28), 9.80 KiB | 1.96 MiB/s, done.
+Total 28 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/moremoban/moban-handlebars/pull/new/master
+remote: 
+To https://github.com/moremoban/moban-handlebars.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
