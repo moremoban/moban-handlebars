@@ -8,5 +8,6 @@ current_version: "0.0.1"
 release: "0.0.0"
 copyright_year: 2018
 license: MIT
-dependencies: []
+dependencies:
+  - pybars3
 description: "Provide handlebars templating capability to moban."
