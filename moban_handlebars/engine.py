@@ -1,13 +1,9 @@
 import codecs
 
-from lml.plugin import PluginInfo
-
 import moban.utils as utils
-import moban.constants as constants
 from pybars import Compiler
 
 
-@PluginInfo(constants.TEMPLATE_ENGINE_EXTENSION, tags=["handlebars", "hbs"])
 class EngineHandlebars(object):
     def __init__(self, template_dirs):
         self.template_dirs = template_dirs
