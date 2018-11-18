@@ -1,3 +1,0 @@
-template: {{ __template__ }}
-target: {{ __target__ }}
-{{ test }}
