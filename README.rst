@@ -9,14 +9,22 @@ moban-handlebars
    :target: https://codecov.io/github/moremoban/moban-handlebars
 
 
-.. image:: https://readthedocs.org/projects/moban-handlebars/badge/?version=latest
-   :target: http://moban-handlebars.readthedocs.org/en/latest/
 
+With `pybars3 <https://github.com/wbond/pybars3>`_, this library allow moban users to
+have handlebars template in their next documentation endeavour. 
 
 Installation
 ================================================================================
 
-You can get it:
+
+You can install moban-handlebars via pip:
+
+.. code-block:: bash
+
+    $ pip install moban-handlebars
+
+
+or clone it and install it:
 
 .. code-block:: bash
 

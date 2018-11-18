@@ -8,3 +8,4 @@ python_version= '3.6'
 
 [packages]
     pybars3 = "*"
+    lml>=0.0.7

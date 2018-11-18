@@ -5,9 +5,10 @@ contact: "wangc_2011@hotmail.com"
 company: "Moremoban members and its contributors"
 version: "0.0.1"
 current_version: "0.0.1"
-release: "0.0.0"
+release: "0.0.1"
 copyright_year: 2018
 license: MIT
 dependencies:
   - pybars3
+  - lml>=0.0.7
 description: "Provide handlebars templating capability to moban."
