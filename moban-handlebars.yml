@@ -1,12 +1,12 @@
 name: "moban-handlebars"
 organisation: "moremoban"
-author: "Charlie Liu, C.W et al"
+author: "Charlie Liu, C.W. et al"
 contact: "wangc_2011@hotmail.com"
-company: "Moremoban members and its contributors"
-version: "0.0.1"
-current_version: "0.0.1"
-release: "0.0.1"
-copyright_year: 2018
+company: "Moremoban dev team and its contributors"
+version: "0.0.2"
+current_version: "0.0.2"
+release: "0.0.2"
+copyright_year: 2019
 license: MIT
 dependencies:
   - pybars3
