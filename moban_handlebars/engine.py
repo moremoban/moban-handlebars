@@ -5,7 +5,7 @@ from pybars import Compiler
 
 
 class EngineHandlebars(object):
-    def __init__(self, template_dirs):
+    def __init__(self, template_dirs, extensions=None):
         self.template_dirs = template_dirs
 
     def get_template(self, template_file):
