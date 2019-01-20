@@ -1,5 +1,5 @@
-import codecs
 import sys
+import codecs
 
 import moban.utils as utils
 from pybars import Compiler
