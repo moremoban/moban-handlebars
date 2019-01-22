@@ -29,3 +29,15 @@ def test_handlebars_file_tests():
         content = output_file.read()
         eq_(content, "here")
     os.unlink(output)
+
+
+def test_handlebars_string_template():
+    template_string = "{{test}}"
+    output = "test.txt"
+    path = os.path.join("tests", "fixtures", "handlebars_tests")
+    engine = BaseEngine([path], path, EngineHandlebars)
+    engine.render_string_to_file(template_string, "file_tests.json", output)
+    with open(output, "r") as output_file:
+        content = output_file.read()
+        eq_(content, "here")
+    os.unlink(output)
