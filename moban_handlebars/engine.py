@@ -32,12 +32,16 @@ class EngineHandlebars(object):
 
 
 def read_file(path):
-    path = to_unicode(path)
-    dir_name = fs.path.dirname(path)
-    the_file_name = fs.path.basename(path)
-    with fs.open_fs(dir_name) as fs_system:
-        with fs_system.open(the_file_name) as file_handle:
-            return file_handle.read()
+    try:
+        path = to_unicode(path)
+        dir_name = fs.path.dirname(path)
+        the_file_name = fs.path.basename(path)
+        with fs.open_fs(dir_name) as fs_system:
+            with fs_system.open(the_file_name) as file_handle:
+                return file_handle.read()
+    except:
+        print(path)
+        raise
 
 
 def to_unicode(path):
