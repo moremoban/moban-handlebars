@@ -1,1 +1,1 @@
-https://github.com/moremoban/moban/archive/dev.zip
+https://github.com/moremoban/moban/archive/pyfs2.zip
