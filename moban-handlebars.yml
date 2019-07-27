@@ -11,5 +11,4 @@ license: MIT
 dependencies:
   - pybars3
   - lml>=0.0.7
-  - moban>=0.6.0
 description: "Provide handlebars templating capability to moban."

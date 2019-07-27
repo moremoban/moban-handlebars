@@ -41,7 +41,6 @@ CLASSIFIERS = [
 INSTALL_REQUIRES = [
     'pybars3',
     'lml>=0.0.7',
-    'moban>=0.6.0',
 ]
 SETUP_COMMANDS = {}
 
