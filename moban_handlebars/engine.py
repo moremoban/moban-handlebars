@@ -16,9 +16,8 @@ class EngineHandlebars(object):
         self.template_dirs = template_dirs
 
     def get_template(self, template_file):
-        actual_file = utils.get_template_path(
-            self.template_dirs, template_file
-        )
+        fs = file_system.get_multi_fs(self.template_dirs)
+        actual_file = fs.geturl(template_file, purpose='fs')
         content = file_system.read_unicode(actual_file)
         hbr_template = Compiler().compile(content)
         return hbr_template
