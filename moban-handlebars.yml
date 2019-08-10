@@ -12,4 +12,4 @@ dependencies:
   - pybars3
   - lml>=0.0.7
 description: "Provide handlebars templating capability to moban."
-lint_command: flake8 --max-line-length=88 --exclude=setup.py
+lint_command: make lint
