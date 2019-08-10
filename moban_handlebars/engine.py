@@ -7,7 +7,12 @@ PY2 = sys.version_info[0] == 2
 
 
 class EngineHandlebars(object):
-    def __init__(self, template_dirs, extensions=None):
+    def __init__(self, template_dirs, options=None):
+        """
+        :param template_dirs: a list of template dirs
+        :param options: a dictionary of potential parameters.
+                        not used yet.
+        """
         self.template_dirs = template_dirs
 
     def get_template(self, template_file):
@@ -19,9 +24,7 @@ class EngineHandlebars(object):
         return hbr_template
 
     def get_template_from_string(self, string):
-        if PY2:
-            # Python 2 strings are not unicode by default
-            string = unicode(string)
+        string = file_system.to_unicode(string)
         return Compiler().compile(string)
 
     def apply_template(self, template, data, _):
