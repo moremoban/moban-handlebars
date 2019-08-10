@@ -1,8 +1,9 @@
 import os
 
-from nose.tools import eq_
 from moban.plugins import ENGINES
 from moban_handlebars.engine import EngineHandlebars
+
+from nose.tools import eq_
 
 
 def test_handlebars_template_not_found():
@@ -17,7 +18,7 @@ def test_handlebars_template_not_found():
 
 def test_handlebars_template_type():
     engine = ENGINES.get_engine("hbs", [], "")
-    assert engine.engine.__class__.__name__ == 'EngineHandlebars'
+    assert engine.engine.__class__.__name__ == "EngineHandlebars"
 
 
 def test_handlebars_file_tests():
