@@ -2,13 +2,13 @@ import os
 
 from moban.plugins import ENGINES
 from moban_handlebars.engine import EngineHandlebars
-
+from moban import file_system
 from nose.tools import eq_
 
 
 def test_handlebars_template_not_found():
     path = os.path.join("tests", "fixtures", "handlebars_tests")
-    engine = EngineHandlebars([path])
+    engine = EngineHandlebars(file_system.get_multi_fs([path]))
     template = engine.get_template("file_tests.template")
     data = dict(test="here")
     result = engine.apply_template(template, data, None)
