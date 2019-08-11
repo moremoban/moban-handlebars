@@ -10,7 +10,10 @@ PY2 = sys.version_info[0] == 2
 class EngineHandlebars(object):
     def __init__(self, template_fs, options=None):
         """
-        :param template_dirs: a list of template dirs
+        template_fs is a multfs instance and gives you the power to load
+        a template from equiped template directories.
+
+        :param fs.multifs.MultiFS template_fs: a MultiFS instance or a FS instance
         :param options: a dictionary of potential parameters.
                         not used yet.
         """
