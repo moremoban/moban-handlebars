@@ -8,18 +8,17 @@ PY2 = sys.version_info[0] == 2
 
 
 class EngineHandlebars(object):
-    def __init__(self, template_dirs, options=None):
+    def __init__(self, template_fs, options=None):
         """
         :param template_dirs: a list of template dirs
         :param options: a dictionary of potential parameters.
                         not used yet.
         """
-        self.template_dirs = template_dirs
+        self.template_fs = template_fs
 
     def get_template(self, template_file):
         template_file = file_system.to_unicode(template_file)
-        fs = file_system.get_multi_fs(self.template_dirs)
-        actual_file = fs.geturl(template_file, purpose="fs")
+        actual_file = self.template_fs.geturl(template_file, purpose="fs")
         content = file_system.read_unicode(actual_file)
         hbr_template = Compiler().compile(content)
         return hbr_template
