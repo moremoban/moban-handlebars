@@ -4,6 +4,13 @@ releases:
 - changes:
   - action: Updated
     details:
+    - "`#7`: support moban v4.1"
+    - "`#9`: support moban v6"
+  date: tbd
+  version: 0.0.3
+- changes:
+  - action: Updated
+    details:
     - "`#1`: support moban v0.3.8"
     - "`#2`: add license file"
     - "`#3`: support moban v0.3.9"
