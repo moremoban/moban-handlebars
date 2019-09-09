@@ -6,7 +6,7 @@ releases:
     details:
     - "`#7`: support moban v4.1"
     - "`#9`: support moban v6"
-  date: tbd
+  date: 10.09.2019
   version: 0.0.3
 - changes:
   - action: Updated
