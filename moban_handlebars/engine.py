@@ -21,8 +21,7 @@ class EngineHandlebars(object):
 
     def get_template(self, template_file):
         template_file = file_system.to_unicode(template_file)
-        actual_file = self.template_fs.geturl(template_file, purpose="fs")
-        content = file_system.read_unicode(actual_file)
+        content = self.template_fs.readtext(template_file)
         hbr_template = Compiler().compile(content)
         return hbr_template
 
