@@ -1,6 +1,6 @@
 import os
 
-from moban.plugins import ENGINES
+from moban.core import ENGINES
 from moban_handlebars.engine import EngineHandlebars
 from moban import file_system
 from nose.tools import eq_
