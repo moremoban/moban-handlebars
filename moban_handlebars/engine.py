@@ -1,6 +1,6 @@
 import sys
 
-from moban import file_system
+from moban.externals import file_system
 
 from pybars import Compiler
 
