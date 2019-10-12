@@ -1,8 +1,7 @@
 import sys
 
-from moban.externals import file_system
-
 from pybars import Compiler
+from moban.externals import file_system
 
 PY2 = sys.version_info[0] == 2
 
