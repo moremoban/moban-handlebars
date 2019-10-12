@@ -1,9 +1,12 @@
 import os
 
-from moban.core import ENGINES
-from moban_handlebars.engine import EngineHandlebars
-from moban import file_system
+from moban.core import ENGINES, plugins
 from nose.tools import eq_
+from moban.externals import file_system
+
+from moban_handlebars.engine import EngineHandlebars
+
+plugins.make_sure_all_pkg_are_loaded()
 
 
 def test_handlebars_template_not_found():

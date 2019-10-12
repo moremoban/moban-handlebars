@@ -4,6 +4,12 @@ releases:
 - changes:
   - action: Updated
     details:
+    - "`#10`: support moban v6.5"
+  date: 14.10.2019
+  version: 0.0.4
+- changes:
+  - action: Updated
+    details:
     - "`#7`: support moban v4.1"
     - "`#9`: support moban v6"
   date: 10.09.2019
