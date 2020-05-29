@@ -26,7 +26,7 @@ Quick start
 
 .. code-block:: bash
 
-   $ moban "<p>{{firstname}} {{lastname}}</p>" -d firstname=hello lastname=world
+   $ moban "<p>{{firstname}} {{lastname}}</p>" --template-type handlebars -d firstname=hello lastname=world
 
 Nested input objects
 ---------------------
@@ -46,9 +46,9 @@ Given a data.json file with the following content
 .. code-block:: bash
 
 
-   $ moban -c data.json  "{{person.firstname}} {{person.lastname}}"
-   Templating {{person.f... to moban.output
-   Templated 1 file.
+   $ moban --template-type handlebars -c data.json  "{{person.firstname}} {{person.lastname}}"
+   Handlebars-ing <p>{{first... to moban.output
+   Handlebarsed 1 file.
    $ cat moban.output
    Yehuda Katz
 
@@ -61,7 +61,7 @@ Let's continue with a bit more fancy feature:
 
 .. code-block:: bash
 
-   $ moban -c data.json "{{#with person}}{{firstname}} {{lastname}} {{/with}}"
+   $ moban --template-type handlebars -c data.json "{{#with person}}{{firstname}} {{lastname}} {{/with}}"
 
 
 

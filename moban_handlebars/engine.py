@@ -7,6 +7,9 @@ PY2 = sys.version_info[0] == 2
 
 
 class EngineHandlebars(object):
+    ACTION_IN_PRESENT_CONTINUOUS_TENSE = "Handlebars-ing"
+    ACTION_IN_PAST_TENSE = "Handlebarsed"
+
     def __init__(self, template_fs, options=None):
         """
         template_fs is a multfs instance and gives you the power to load
