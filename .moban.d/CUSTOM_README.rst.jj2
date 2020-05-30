@@ -19,39 +19,6 @@ Quick start
 Nested input objects
 ---------------------
 
-Given a data.json file with the following content
-
-.. code-block::
-
-    {
-      "person": {
-        "firstname": "Yehuda",
-        "lastname": "Katz",
-      },
-    }
-
-
-.. code-block:: bash
-
-{% raw %}
-   $ moban --template-type handlebars -c data.json  "{{person.firstname}} {{person.lastname}}"
-   Handlebars-ing <p>{{first... to moban.output
-   Handlebarsed 1 file.
-   $ cat moban.output
-   Yehuda Katz
-{% endraw %}
-
-For `handlebars.js` users, yes, the example was copied from handlebarjs.com. The
-aim is to show off what we can do.
-
-Let's continue with a bit more fancy feature:
-
-{% raw %}
-
-.. code-block:: bash
-
-   $ moban --template-type handlebars -c data.json "{{#with person}}{{firstname}} {{lastname}} {{/with}}"
-
-{% endraw %}
+{% include "handlebars_example.rst.jj2" %}
 
 {%endblock%}

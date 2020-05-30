@@ -1,11 +1,7 @@
-requires:
-  - type: git
-    url: https://github.com/moremoban/pypi-mobans
-    submodule: true
-    branch: dev
 configuration:
   template_dir:
-  - "pypi-mobans:templates"
+  - "git://github.com/moremoban/pypi-mobans?submodule=true&branch=dev!/templates"
+  - "git://github.com/moremoban/pypi-mobans?submodule=true&branch=dev!/statics"
   - ".moban.d"
   configuration: moban-handlebars.yml
 targets:
@@ -17,8 +13,9 @@ targets:
   - test.sh: test.script.jj2
   - "moban_handlebars/_version.py": "_version.py.jj2"
   - .gitignore: gitignore.jj2
-  - .travis.yml: travis.yml.jj2
+  - .travis.yml: custom_travis.yml.jj2
   - Pipfile: Pipfile.jj2
   - output: CHANGELOG.rst
     configuration: changelog.yml
     template: CHANGELOG.rst.jj2
+  - ".github/workflows/pythonpublish.yml": "pythonpublish.yml"
