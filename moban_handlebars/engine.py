@@ -1,9 +1,5 @@
-import sys
-
 from pybars import Compiler
 from moban.externals import file_system
-
-PY2 = sys.version_info[0] == 2
 
 
 class EngineHandlebars(object):
@@ -22,14 +18,12 @@ class EngineHandlebars(object):
         self.template_fs = template_fs
 
     def get_template(self, template_file):
-
         template_file = file_system.to_unicode(template_file)
         content = self.template_fs.readtext(template_file)
         hbr_template = Compiler().compile(content)
         return hbr_template
 
     def get_template_from_string(self, string):
-
         string = file_system.to_unicode(string)
         return Compiler().compile(string)
 

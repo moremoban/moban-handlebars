@@ -3,10 +3,10 @@ organisation: "moremoban"
 author: "Charlie Liu, C.W. et al"
 contact: "wangc_2011@hotmail.com"
 company: "Moremoban dev team and its contributors"
-version: "0.0.4"
-current_version: "0.0.4"
-release: "0.0.4"
-copyright_year: 2018-2019
+version: "0.0.5"
+current_version: "0.0.5"
+release: "0.0.5"
+copyright_year: 2018-2020
 license: MIT
 dependencies:
   - pybars3

@@ -4,6 +4,12 @@ releases:
 - changes:
   - action: Updated
     details:
+    - "Name the moban actions when this template is used"
+  date: 04.06.2020
+  version: 0.0.5
+- changes:
+  - action: Updated
+    details:
     - "`#10`: support moban v6.5"
   date: 14.10.2019
   version: 0.0.4

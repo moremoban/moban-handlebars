@@ -18,4 +18,7 @@ targets:
   - output: CHANGELOG.rst
     configuration: changelog.yml
     template: CHANGELOG.rst.jj2
+  - lint.sh: lint.script.jj2
+  - LICENSE: "mit_license.jj2"
+  - MANIFEST.in: MANIFEST.in.jj2
   - ".github/workflows/pythonpublish.yml": "pythonpublish.yml"
