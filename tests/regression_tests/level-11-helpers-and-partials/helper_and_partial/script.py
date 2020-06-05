@@ -1,10 +1,9 @@
-from moban_handlebars.helpers import HandlebarHelper
-from moban_handlebars.partials import register_partial
+from moban_handlebars.api import Helper, register_partial
 
 register_partial("header", "<h1>People</h1>")
 
 
-@HandlebarHelper("list")
+@Helper("list")
 def _list(this, options, items):
     result = [u"<ul>"]
     for thing in items:
