@@ -1,0 +1,36 @@
+REAME
+===========
+
+Moban way of `pybar3 usage <https://github.com/wbond/pybars3#usage>`_:
+
+Let's save the following file a `script.py` under `helper_and_partial` folder:
+
+.. code-block:: python
+
+   from moban_handlebars.helpers import HandlebarHelper
+   from moban_handlebars.partials import register_partial
+
+   register_partial('header', '<h1>People</h1>')
+
+
+   @HandlebarHelper('list')
+   def _list(this, options, items):
+       result = [u'<ul>']
+       for thing in items:
+           result.append(u'<li>')
+           result.extend(options['fn'](thing))
+           result.append(u'</li>')
+       result.append(u'</ul>')
+       return result
+
+
+Let invoke handlebar template:
+
+
+.. code-block: bash
+
+   $ moban --template-type hbs -pd helper_and_partial -c data.json "{{>header}}{{#list people}}{{name}} {{age}}{{/list}}"
+   Handlebars-ing {{>header}... to moban.output
+   Handlebarsed 1 file.
+   $ cat moban.output
+   <h1>People</h1><ul><li>Bill 100</li><li>Bob 90</li><li>Mark 25</li></ul>

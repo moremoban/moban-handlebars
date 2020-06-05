@@ -22,3 +22,4 @@ targets:
   - LICENSE: "mit_license.jj2"
   - MANIFEST.in: MANIFEST.in.jj2
   - ".github/workflows/pythonpublish.yml": "pythonpublish.yml"
+  - "tests/regression_tests/level-11-helpers-and-partials/README.rst": "level-11-readme.rst.jj2"

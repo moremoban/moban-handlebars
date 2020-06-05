@@ -32,3 +32,5 @@ Let's continue with a bit more fancy feature:
    $ moban --template-type handlebars -c data.json "{{#with person}}{{firstname}} {{lastname}} {{/with}}"
 
 {% endraw %}
+
+{% include "helper_and_partial.rst.jj2" %}
