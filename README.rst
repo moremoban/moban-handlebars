@@ -89,8 +89,19 @@ Let's save the following file a `script.py` under `helper_and_partial` folder:
        result.append(u'</ul>')
        return result
 
+And given `data.json` reads as the following:
 
-Let invoke handlebar template:
+.. code-block::
+
+   {
+       "people":[
+           {"name": "Bill", "age": 100},
+           {"name": "Bob", "age": 90},
+           {"name": "Mark", "age": 25}
+       ]
+   }
+
+Let's invoke handlebar template:
 
 
 .. code-block:: bash
