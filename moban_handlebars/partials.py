@@ -1,6 +1,7 @@
-from lml.plugin import PluginInfo
-from moban_handlebars.constants import PARTIALS_EXTENSION
 from pybars import Compiler
+from lml.plugin import PluginInfo
+
+from moban_handlebars.constants import PARTIALS_EXTENSION
 
 
 def register_partial(identifier, partial):

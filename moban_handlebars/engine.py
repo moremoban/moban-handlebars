@@ -1,8 +1,9 @@
 from typing import Dict
-from lml.plugin import PluginManager
 
 from pybars import Compiler
+from lml.plugin import PluginManager
 from moban.externals import file_system
+
 from moban_handlebars.constants import HELPER_EXTENSION, PARTIALS_EXTENSION
 
 
@@ -61,6 +62,8 @@ class EngineHandlebars(object):
 
         partials = PARTIALS.get_all()
         partials = dict(list(partials))
-        rendered_content = "".join(template(data, helpers=helpers, partials=partials))
+        rendered_content = "".join(
+            template(data, helpers=helpers, partials=partials)
+        )
         rendered_content = rendered_content
         return rendered_content

@@ -1,2 +1,2 @@
-HELPER_EXTENSION = 'Handlebar-Helpers'
-PARTIALS_EXTENSION = 'Handlebar-Partials'
+HELPER_EXTENSION = "Handlebar-Helpers"
+PARTIALS_EXTENSION = "Handlebar-Partials"
