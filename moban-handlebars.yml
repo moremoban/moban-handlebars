@@ -10,6 +10,6 @@ copyright_year: 2018-2020
 license: MIT
 dependencies:
   - pybars3
-  - lml>=0.1.0
+  - lml>=0.0.9
 description: "Provide handlebars templating capability to moban."
 lint_command: make lint

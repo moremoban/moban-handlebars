@@ -63,7 +63,7 @@ CLASSIFIERS = [
 
 INSTALL_REQUIRES = [
     "pybars3",
-    "lml>=0.1.0",
+    "lml>=0.0.9",
 ]
 SETUP_COMMANDS = {}
 
