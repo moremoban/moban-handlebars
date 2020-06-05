@@ -8,7 +8,7 @@ python_version= '3.6'
 
 [packages]
 pybars3 = "*"
-lml = '>=0.0.7'
+lml = '>=0.0.9'
 
 [dev-packages]
 nose = "*"

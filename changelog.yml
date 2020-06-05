@@ -4,6 +4,13 @@ releases:
 - changes:
   - action: Updated
     details:
+    - "Name the moban actions when this template is used"
+    - "`#12`: provide apis for end user to use their own block helper and partials"
+  date: 07.06.2020
+  version: 0.0.5
+- changes:
+  - action: Updated
+    details:
     - "`#10`: support moban v6.5"
   date: 14.10.2019
   version: 0.0.4

@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
-# Template by pypi-mobans
+"""
+Template by pypi-mobans
+"""
+
+import os
+import sys
 import codecs
 import locale
-import os
 import platform
-import sys
 from shutil import rmtree
 
-from setuptools import Command, find_packages, setup
+from setuptools import Command, setup, find_packages
 
 PY2 = sys.version_info[0] == 2
 PY26 = PY2 and sys.version_info[1] < 7
@@ -29,14 +32,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "moban-handlebars"
 AUTHOR = "Charlie Liu, C.W. et al"
-VERSION = "0.0.4"
+VERSION = "0.0.5"
 EMAIL = "wangc_2011@hotmail.com"
 LICENSE = "MIT"
 DESCRIPTION = (
     "Provide handlebars templating capability to moban."
 )
 URL = "https://github.com/moremoban/moban-handlebars"
-DOWNLOAD_URL = "%s/archive/0.0.4.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.0.5.tar.gz" % URL
 FILES = ["README.rst", 'CONTRIBUTORS.rst', "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -52,27 +55,25 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.6",
-
     "Programming Language :: Python :: 3.7",
-
     "Programming Language :: Python :: 3.8",
 
 ]
 
+
 INSTALL_REQUIRES = [
     "pybars3",
-    "lml>=0.0.7",
+    "lml>=0.0.9",
 ]
 SETUP_COMMANDS = {}
 
-
-PACKAGES = find_packages(exclude=["ez_setup", "examples", "tests"])
+PACKAGES = find_packages(exclude=["ez_setup", "examples", "tests", "tests.*"])
 EXTRAS_REQUIRE = {
 }
 # You do not need to read beyond this line
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
-GS_COMMAND = ("gs moban-handlebars v0.0.4 " +
-              "Find 0.0.4 in changelog for more details")
+GS_COMMAND = ("gs moban-handlebars v0.0.5 " +
+              "Find 0.0.5 in changelog for more details")
 NO_GS_MESSAGE = ("Automatic github release is disabled. " +
                  "Please install gease to enable it.")
 UPLOAD_FAILED_MSG = (
