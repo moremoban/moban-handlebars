@@ -1,6 +1,6 @@
 all: test
 
-test: lint
+test: 
 	bash test.sh
 
 install_test:
