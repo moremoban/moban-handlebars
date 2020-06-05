@@ -1,7 +1,33 @@
 from typing import Dict
+from lml.plugin import PluginManager
 
 from pybars import Compiler
 from moban.externals import file_system
+from moban_handlebars.constants import HELPER_EXTENSION, PARTIALS_EXTENSION
+
+
+class HandlebarsHelperManager(PluginManager):
+    def __init__(self):
+        super(HandlebarsHelperManager, self).__init__(HELPER_EXTENSION)
+
+    def get_all(self):
+        for name in self.registry.keys():
+            the_helper = self.load_me_now(name)
+            yield (name, the_helper)
+
+
+class HandlebarsPartialManager(PluginManager):
+    def __init__(self):
+        super(HandlebarsPartialManager, self).__init__(PARTIALS_EXTENSION)
+
+    def get_all(self):
+        for name in self.registry.keys():
+            partial = self.load_me_now(name)
+            yield (name, partial[name])
+
+
+HELPERS = HandlebarsHelperManager()
+PARTIALS = HandlebarsPartialManager()
 
 
 class EngineHandlebars(object):
@@ -30,6 +56,11 @@ class EngineHandlebars(object):
         return Compiler().compile(string)
 
     def apply_template(self, template, data: Dict, _):
-        rendered_content = "".join(template(data))
+        helpers = HELPERS.get_all()
+        helpers = dict(list(helpers))
+
+        partials = PARTIALS.get_all()
+        partials = dict(list(partials))
+        rendered_content = "".join(template(data, helpers=helpers, partials=partials))
         rendered_content = rendered_content
         return rendered_content
