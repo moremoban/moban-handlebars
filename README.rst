@@ -17,6 +17,10 @@ moban-handlebars
     :target: https://github.com/moremoban/moban-handlebars/stargazers
 
 
+
+Introduction
+==============
+
 With `pybars3 <https://github.com/wbond/pybars3>`_, this library allow moban users to
 have handlebars template in their next documentation endeavour.
 

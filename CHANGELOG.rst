@@ -1,12 +1,14 @@
 Change log
 ================================================================================
 
-0.0.5 - 04.06.2020
+0.0.5 - 07.06.2020
 --------------------------------------------------------------------------------
 
 **Updated**
 
 #. Name the moban actions when this template is used
+#. `#12 <https://github.com/moremoban/moban-handlebars/issues/12>`_: provide
+   apis for end user to use their own block helper and partials
 
 0.0.4 - 14.10.2019
 --------------------------------------------------------------------------------
