@@ -14,9 +14,6 @@ Given a data.json file with the following content
 
 {% raw %}
    $ moban --template-type handlebars -c data.json  "{{person.firstname}} {{person.lastname}}"
-   Handlebars-ing <p>{{first... to moban.output
-   Handlebarsed 1 file.
-   $ cat moban.output
    Yehuda Katz
 {% endraw %}
 
